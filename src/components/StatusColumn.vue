@@ -3,15 +3,22 @@
         <h2>{{ title }}</h2>
         <div>{{ tasks.length }} Tasks</div>
         <ul class="task-list">
-            <li class="task-item" v-for="task in tasks" :key="task">{{ task }}</li>
+            <li class="task-item" v-for="task in tasks" :key="task">
+                <task v-bind:task="task"></task>
+            </li>
         </ul>
         <button @click="addTask">+ Add Task</button>
     </div>
 </template>
 
 <script>
+import Task from './Task.vue'
+
 export default {
     props: { column: Object },
+    components: {
+        Task
+    },
     data() {
         return {
             title: this.column.title,
@@ -27,7 +34,7 @@ export default {
 </script>
 
 <style scoped>
-    .task-col{
+    .task-col {
         margin: 10px;
         padding: 10px;
     }

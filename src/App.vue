@@ -17,7 +17,7 @@ export default {
   data() {
     return {
       userName: "Joe",
-      currentDate: new Date(),
+      currentDate: new Date().toLocaleDateString("en-US", { weekday: 'long', month: 'long', day: 'numeric' }),
       columns: [
         {
           title: "Backlog",
