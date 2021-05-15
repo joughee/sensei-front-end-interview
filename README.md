@@ -1,4 +1,10 @@
-# front-end-interview
+# vue-kanban-board
+
+
+## Description
+```
+Simple kanban board built with Vue.js components.
+```
 
 ## Project setup
 ```
